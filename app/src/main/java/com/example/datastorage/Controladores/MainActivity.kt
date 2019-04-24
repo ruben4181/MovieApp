@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        loginServices= LoginServices(this)
-        /*val user = User(null, "Leo", "leo@gmail.com", 35, "secret")
+        loginServices= LoginServices(this)/*
+        val user = User(null, "Leo", "leo@gmail.com", 35, "secret")
         val user2 = User(null, "Jose", "leonardo@hotmail.com", 25, "3")
         val user3 = User(null, "Messi", "messi@gmail.com", 31, "2")
 
