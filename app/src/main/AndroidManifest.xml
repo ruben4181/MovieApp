@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.datastorage">
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
             android:allowBackup="true"
             android:debuggable="true"
@@ -11,14 +11,12 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:hardwareAccelerated="false">
-        <activity android:name=".Controladores.ProfileActivity">
-        </activity>
-        <activity android:name=".Controladores.UsersListActivity">
-        </activity>
-        <activity android:name=".Controladores.RegisterActivity">
-        </activity>
+        <activity android:name=".RegisterUserActivity"/>
+        <activity android:name=".MoviesListActivity"/>
+        <activity android:name=".AddMovieActivity"/>
+        <activity android:name=".MovieActivity"/>
         <activity
-                android:name=".Controladores.MainActivity"
+                android:name=".MainActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

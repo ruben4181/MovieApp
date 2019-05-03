@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Controladores.RegisterActivity"
+        tools:context=".MainActivity"
         android:background="@color/colorBackGround">
 
     <EditText
@@ -18,9 +18,26 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="200dp"
             android:ems="10"
-            android:id="@+id/nombre_reg"
+            android:id="@+id/first_name_reg"
             android:gravity="center"
-            android:hint="@string/nombre"
+            android:hint="Nombre"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorTextHint"
+            android:textColorLink="@color/colorText"
+            android:textColorHighlight="@color/colorText" app:layout_constraintVertical_bias="0.283"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@+id/first_name_reg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/last_name_reg"
+            android:gravity="center"
+            android:hint="Apellido"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorTextHint"
             android:textColorLink="@color/colorText"
@@ -29,91 +46,107 @@
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:ems="10"
-            app:layout_constraintTop_toBottomOf="@+id/nombre_reg"
+            app:layout_constraintTop_toBottomOf="@+id/last_name_reg"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="8dp"
-            android:id="@+id/correo_reg"
+            android:id="@+id/age_reg"
             android:gravity="center"
-            android:hint="@string/correo"
+            android:hint="Edad"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorTextHint"
             android:textColorLink="@color/colorText"
-            android:textColorHighlight="@color/colorText"/>
+            android:textColorHighlight="@color/colorText" android:contentDescription="Edad"/>
 
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            app:layout_constraintTop_toBottomOf="@+id/correo_reg"
+            app:layout_constraintTop_toBottomOf="@+id/age_reg"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="8dp"
+            android:id="@+id/email_reg"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorTextHint"
+            android:textColorLink="@color/colorText"
+            android:textColorHighlight="@color/colorText" android:hint="E-Mail"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@+id/age_reg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="64dp"
+            android:id="@+id/username_reg"
+            android:gravity="center"
+            android:hint="Nombre de Usuario"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorTextHint"
+            android:textColorLink="@color/colorText"
+            android:textColorHighlight="@color/colorText"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            app:layout_constraintTop_toBottomOf="@+id/age_reg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="116dp"
             android:id="@+id/password_reg"
             android:gravity="center"
-            android:hint="@string/contraseña"
+            android:hint="Contraseña"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorTextHint"
             android:textColorLink="@color/colorText"
             android:textColorHighlight="@color/colorText"/>
-
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            app:layout_constraintTop_toBottomOf="@+id/password_reg"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="8dp"
-            android:id="@+id/edad_reg"
-            android:gravity="center"
-            android:hint="@string/edad"
-            android:textColor="@color/colorText"
-            android:textColorHint="@color/colorTextHint"
-            android:textColorLink="@color/colorText"
-            android:textColorHighlight="@color/colorText"/>
-
     <Button
-            android:text="@string/registrar"
+            android:text="Registrar"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/edad_reg"
-            android:id="@+id/registrar"
+            android:layout_marginTop="212dp"
+            app:layout_constraintTop_toBottomOf="@+id/email_reg"
+            android:id="@+id/add_button_add_movie"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorPrimary"
             android:background="@drawable/rounder_corner_button"
-            android:ems="10"
-            android:onClick="signUp"/>
+            android:ems="10" app:layout_constraintHorizontal_bias="0.497"
+            android:onClick="singUpUser"/>
+    <!--android:onClick="signUp"/>-->
 
     <Button
-            android:text="@string/volver"
+            android:text="Volver"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="44dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/registrar"
+            app:layout_constraintTop_toBottomOf="@+id/add_button_add_movie"
             android:id="@+id/volver"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorPrimary"
             android:background="@drawable/rounder_corner_button"
-            android:ems="10"/>
+            android:ems="10" app:layout_constraintHorizontal_bias="0.497" android:layout_marginTop="12dp"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@mipmap/ic_launcher_round"
             android:id="@+id/imageButton" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/nombre_reg" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/first_name_reg" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.845"/>
+            app:layout_constraintVertical_bias="0.213"/>
+    <!--android:onClick="pickProfilePicture"/>-->
 
 </android.support.constraint.ConstraintLayout>
+
